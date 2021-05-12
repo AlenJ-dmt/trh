@@ -1,0 +1,86 @@
+.plant__title {
+  color: #ffffff;
+  opacity: 80%;
+  font-size: 20px;
+}
+.plant__care__menu__icon {
+  color: #ffffff;
+  opacity: 60%;
+  height: 30px;
+  width: 30px;
+}
+.plant__care__menu {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+.nickname {
+  font-size: 15px;
+  color: #ffffff;
+  margin: 10px;
+}
+.plant__general_info__container {
+  z-index: 1;
+}
+.plant__care__card {
+  text-align: left;
+  height: 85%;
+  width: 85%;
+  position: relative;
+}
+.plant__care__description {
+  font-size: 17px;
+  color: #ffffff;
+  margin-top: 7px;
+}
+.close__btn {
+  height: 30px;
+  width: 30px;
+  color: #ffffff;
+  opacity: 80%;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+}
+.scale-up-center {
+  animation: scale-up-center 1000ms ease 100ms 1 normal forwards;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.scale-out-center {
+  animation: scale-out-center 1000ms ease 100ms 1 normal forwards;
+}
+
+@keyframes scale-out-center {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+
+
+.slide-in-bck-center {
+	animation: slide-in-bck-center 954ms ease-out 71ms 1 normal backwards
+}
+
+@keyframes slide-in-bck-center {
+    0% {
+    transform: translateZ(600px);
+    opacity: 0;
+    }
+    100% {
+    transform: translateZ(0);
+    opacity: 1;
+    }
+    }
