@@ -9,6 +9,7 @@ const PlantProfilePage = () => {
     <div id="plant__profile__page__container">
       <PlantBanner />
       <PlantGeneralInformation />
+      <h5 id="brand" >Powered By The Root Haus</h5>
     </div>
   );
 };

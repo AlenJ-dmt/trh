@@ -34,14 +34,50 @@
   color: #ffffff;
   margin-top: 7px;
 }
+.description__card__container {
+  display: flex;
+  flex-direction: column;
+}
+.plant__care__description_input {
+  background-color: #222222;
+  font-size: 17px;
+  color: #ffffff;
+  margin-top: 7px;
+  border: none;
+  outline: none;
+  font-family: "Comfortaa";
+}
 .close__btn {
-  height: 30px;
-  width: 30px;
   color: #ffffff;
   opacity: 80%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.description__input {
+  width: 80%;
+  height: 30px;
+  display: block;
+}
+.button__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 45px;
+  width: 100%;
   position: absolute;
-  bottom: 10px;
-  right: 0;
+  bottom: 0;
+}
+
+.btn {
+  height: 40px;
+  width: 65px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 15px;
 }
 .scale-up-center {
   animation: scale-up-center 1000ms ease 100ms 1 normal forwards;
@@ -69,18 +105,17 @@
   }
 }
 
-
 .slide-in-bck-center {
-	animation: slide-in-bck-center 954ms ease-out 71ms 1 normal backwards
+  animation: slide-in-bck-center 954ms ease-out 71ms 1 normal backwards;
 }
 
 @keyframes slide-in-bck-center {
-    0% {
+  0% {
     transform: translateZ(600px);
     opacity: 0;
-    }
-    100% {
+  }
+  100% {
     transform: translateZ(0);
     opacity: 1;
-    }
-    }
+  }
+}

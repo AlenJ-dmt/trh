@@ -1,7 +1,14 @@
-#plant__profile__page__container{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+#plant__profile__page__container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#brand {
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 0.2rem;
+  position: absolute;
+  bottom: 25px;
 }
