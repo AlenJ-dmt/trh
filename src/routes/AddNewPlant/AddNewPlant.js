@@ -21,7 +21,7 @@ const AddNewPlant = (propr) => {
   const inputChangeHandler = (ev) => {
     setState({
       ...state,
-      [ev.target.name]: [ev.target.value],
+      [ev.target.name]: ev.target.value,
     });
   };
 

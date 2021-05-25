@@ -71,7 +71,7 @@ const PlantGeneralInformation = (props) => {
         </div>
       </Card>
       <PlantCareCard
-        careTitle={"Lighting"}
+        careTitle="Lighting"
         show={showLighting}
         infoDescription={props.lighting}
         onClose={() => {
@@ -88,7 +88,7 @@ const PlantGeneralInformation = (props) => {
         }
       />
       <PlantCareCard
-        careTitle={"Watering"}
+        careTitle="Watering"
         show={showWatering}
         infoDescription={props.watering}
         onClose={() => {
@@ -105,7 +105,7 @@ const PlantGeneralInformation = (props) => {
         }
       />
       <PlantCareCard
-        careTitle={"Humedity"}
+        careTitle="Humedity"
         show={showHumedity}
         infoDescription={props.humedity}
         onClose={() => {
