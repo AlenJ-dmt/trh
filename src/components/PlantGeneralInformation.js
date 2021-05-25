@@ -15,7 +15,6 @@ const PlantGeneralInformation = (props) => {
   const [showWatering, setShowWatering] = useState(false);
   const [showHumedity, setShowHumedity] = useState(false);
   const [selectedInfo, setSelectedInfo] = useState("");
-  const [updateValue, setUpdateValue] = useState("");
 
   return (
     <div className="plant__general_info__container">
@@ -78,12 +77,12 @@ const PlantGeneralInformation = (props) => {
           setSelectedInfo("");
           setShowLighting(false);
         }}
-        onChangeDo={setUpdateValue}
+        onChangeDo={props.setLighting}
         onSave={() =>
           PlantApiService.updatePlant(
             props.plantId,
             "lighting",
-            updateValue
+            props.lighting
           ).then(() => setShowHumedity(false))
         }
       />
@@ -95,12 +94,12 @@ const PlantGeneralInformation = (props) => {
           setSelectedInfo("");
           setShowWatering(false);
         }}
-        onChangeDo={setUpdateValue}
+        onChangeDo={props.setWatering}
         onSave={() =>
           PlantApiService.updatePlant(
             props.plantId,
             "watering",
-            updateValue
+            props.watering
           ).then(() => setShowHumedity(false))
         }
       />
@@ -112,9 +111,13 @@ const PlantGeneralInformation = (props) => {
           setSelectedInfo("humidity");
           setShowHumedity(false);
         }}
-        onChangeDo={setUpdateValue}
+        onChangeDo={props.setHumedity}
         onSave={() => {
-          PlantApiService.updatePlant(props.plantId, "humedity", updateValue);
+          PlantApiService.updatePlant(
+            props.plantId,
+            "humedity",
+            props.humedity
+          );
           setShowHumedity(false);
         }}
       />

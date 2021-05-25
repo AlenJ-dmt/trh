@@ -37,6 +37,9 @@ const PlantProfilePage = () => {
         lighting={lighting}
         watering={watering}
         humedity={humedity}
+        setHumedity={setHumedity}
+        setLighting={setLighting}
+        setWatering={setWatering}
       />
       <h5 id="brand">Powered By The Root Haus</h5>
     </div>
