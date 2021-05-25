@@ -1,0 +1,54 @@
+.plant__draft {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.plant__draft__title {
+  color: #d1d1d1;
+  font-size: 20px;
+}
+.plant__draft__nickname {
+  color: #d1d1d1;
+  font-size: 20px;
+}
+.plant__draft__header {
+  color: #ffffff;
+  opacity: 80%;
+  font-size: 20px;
+}
+.plant__draft__care__container {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  padding-top: 20px;
+}
+.plant__draft__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.plant__draft__content {
+  font-size: 17px;
+  color: #ffffff;
+  margin-top: 7px;
+}
+
+.plant__draft__btn {
+  height: 48px;
+  width: 90vw;
+  background-color: #2d2d2d;
+  color: #ffffff;
+  font-family: "Comfortaa";
+  border-radius: 13px;
+  margin-top: 15px;
+  border: none;
+  outline: none;
+}
+.plant__draft__btn:active {
+  background-color: #383838;
+  transform: scale(0.95);
+}

@@ -1,11 +1,11 @@
 .main__header {
   color: #ffffff;
+  font-family: "Josefin Slab", serif;
 }
 .main__section {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Josefin Slab", serif;
   margin-top: 20px;
   flex-direction: column;
 }

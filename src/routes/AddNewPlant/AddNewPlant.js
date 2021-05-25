@@ -1,7 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { useHistory } from "react-router-dom";
+import PlantContext from "../../context/plantContext";
 import "./AddNewPlant.css";
 
 const AddNewPlant = (propr) => {
+  const context = useContext(PlantContext);
+
+  const history = useHistory();
+
   const [state, setState] = useState({
     plantName: "",
     nickname: "",
@@ -10,7 +16,7 @@ const AddNewPlant = (propr) => {
     humedity: "",
   });
 
-  const [source, setSource] = useState("");
+  const [image, setImage] = useState(false);
 
   const inputChangeHandler = (ev) => {
     setState({
@@ -19,15 +25,19 @@ const AddNewPlant = (propr) => {
     });
   };
 
-  const handleCapture = (target) => {
-    if (target.files) {
-      if (target.files.length !== 0) {
-        const file = target.files[0];
-        const newUrl = URL.createObjectURL(file);
-        setSource(newUrl);
-      }
-    }
+  const moveToDraft = () => {
+    const objectURL = URL.createObjectURL(image);
+    context.setTempImg(objectURL);
+    context.setImage(image);
+    context.setPlantName(state.plantName);
+    context.setNickname(state.nickname);
+    context.setLighting(state.lighting);
+    context.setWatering(state.watering);
+    context.setHumedity(state.humedity);
+    history.push("/plantDraft");
   };
+
+  
 
   return (
     <div className="add__plant__section">
@@ -79,20 +89,14 @@ const AddNewPlant = (propr) => {
           />
         </div>
       </form>
-      
+
       <input
-        accept="image/*"
-        placeholder="Add image"
-        className="add__plant__image"
-        id="icon-button-file"
         type="file"
-        capture="environment"
-        onChange={(e) => handleCapture(e.target)}
+        onChange={(e) => {
+          setImage(e.target.files[0]);
+        }}
       />
-      <button
-        onClick={() => console.log(source)}
-        className="add__plant__button"
-      >
+      <button onClick={() => moveToDraft()} className="add__plant__button">
         Next
       </button>
     </div>

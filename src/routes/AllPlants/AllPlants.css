@@ -1,0 +1,6 @@
+.all__plants {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

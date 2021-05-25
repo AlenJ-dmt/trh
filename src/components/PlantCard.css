@@ -1,0 +1,73 @@
+.plant__card__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+  }
+  .plant__card__img__circle {
+    border: 1px solid white;
+    background-color: white;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  .plant__card__img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .plant__card__description {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    color: #ffffff;
+    opacity: 80%;
+    font-size: 15px;
+    text-align: left;
+    height: 100%;
+    justify-content: space-evenly;
+  }
+  .plant__card__img__holder{
+    display: flex;
+    flex: 30%;
+  }
+  .plant__card__button__container{
+    display: flex;
+    justify-content: space-between;
+  }
+  .plant__card__btn{
+    height: 40px;
+    width: 85px;
+    background-color: transparent;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  
+  .delete{
+    color: rgb(255 59 59);
+    border: 2px solid rgb(255 59 59);
+    outline: none;
+  }
+  
+  .delete:active {
+    background-color: rgb(255 125 125 / 55%);
+    transform: scale(0.95);
+  }
+  
+  .details{
+    color: #20ff79;
+    border: 2px solid #20ff79;
+    outline: none;
+  }
+  
+  .details:active {
+    background-color: #38ff8742;
+    transform: scale(0.95);
+  }
