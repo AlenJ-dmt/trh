@@ -9,9 +9,9 @@ const PlantCareCard = (props) => {
 
   return (
     <Card
-      className={
-        props.selectedInfo !== "" ? "slide-in-bck-center" : "scale-out-center"
-      }
+      // className={
+      //   props.selectedInfo !== "" ? "slide-in-bck-center" : "scale-out-center"
+      // }
       style={{ display: props.show ? "flex" : "none" }}
       height={190}
     >
@@ -33,7 +33,13 @@ const PlantCareCard = (props) => {
         )}
         <div className="button__container">
           {editMode ? (
-            <button className="btn" onClick={() => props.onSave()}>
+            <button
+              className="btn"
+              onClick={() => {
+                props.onSave();
+                setEditmode(false);
+              }}
+            >
               Save
             </button>
           ) : (

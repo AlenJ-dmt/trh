@@ -56,11 +56,17 @@
 .btn {
   height: 40px;
   width: 65px;
+  background-color: #ffffff;
   border-radius: 20px;
   border: none;
   outline: none;
   font-size: 15px;
 }
+
+.btn:active {
+  transform: scale(0.9);
+}
+
 .scale-up-center {
   animation: scale-up-center 1000ms ease 100ms 1 normal forwards;
 }
