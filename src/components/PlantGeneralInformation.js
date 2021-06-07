@@ -46,6 +46,7 @@ const PlantGeneralInformation = (props) => {
               setShowLighting(true);
               setShowWatering(false);
               setShowHumedity(false);
+              setIsQrOpen(false);
               setSelectedInfo("lighting");
             }}
           >
@@ -60,6 +61,7 @@ const PlantGeneralInformation = (props) => {
               setShowWatering(true);
               setShowLighting(false);
               setShowHumedity(false);
+              setIsQrOpen(false);
               setSelectedInfo("watering");
             }}
           >
@@ -74,6 +76,7 @@ const PlantGeneralInformation = (props) => {
               setShowHumedity(true);
               setShowLighting(false);
               setShowWatering(false);
+              setIsQrOpen(false);
               setSelectedInfo("humidity");
             }}
           >
