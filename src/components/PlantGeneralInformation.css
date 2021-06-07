@@ -21,4 +21,28 @@
 .plant__general_info__container {
   z-index: 1;
 }
+.sub__headerContainer{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.qr__code__container{
+  z-index: 5;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0ffcb;
+  border-radius: 20px;
 
+}
+.qr_window{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 500px;
+  height: 250px;
+}

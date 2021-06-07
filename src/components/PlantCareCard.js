@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./PlantCareCard.css";
 import Card from "./Card";
 import { AiFillCloseCircle } from "react-icons/ai";
-import PlantApiService from "../services/plant-api-service";
 
 const PlantCareCard = (props) => {
   const [editMode, setEditmode] = useState(false);
