@@ -12,11 +12,10 @@ import { FaThermometerEmpty } from "react-icons/fa";
 import { FaThermometerFull } from "react-icons/fa";
 import { HiOutlineQrcode } from "react-icons/hi";
 import { AiFillCloseCircle } from "react-icons/ai";
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router-dom";
 
 const PlantGeneralInformation = (props) => {
-
-  const plantId = useParams()
+  const params = useParams();
 
   const [showLighting, setShowLighting] = useState(false);
   const [showWatering, setShowWatering] = useState(false);
@@ -40,31 +39,7 @@ const PlantGeneralInformation = (props) => {
             className="plant__care__menu__icon"
           />
         </div>
-        {isQrOpen && (
-          <div className="qr_window">
-            <div className="qr__code__container">
-              <QRCode
-                value={`https://trh-seven.vercel.app/plantProfile/${plantId}`}
-                renderAs="svg"
-                level="H"
-                size={175}
-                // bgColor="#1A6426"
-                fgColor="#1A6426"
-                imageSettings={{
-                  src: "https://res.cloudinary.com/drfaya2tc/image/upload/v1623075135/trh_o8mzvf.png",
-                  height: 50,
-                  width: 50,
-                }}
-              />
-            </div>
-            <div className="close__btn" onClick={props.onClose}>
-              <AiFillCloseCircle
-                onClick={() => setIsQrOpen(false)}
-                className="close__btn"
-              />
-            </div>
-          </div>
-        )}
+
         <div className="plant__care__menu">
           <div
             onClick={() => {
@@ -113,6 +88,31 @@ const PlantGeneralInformation = (props) => {
           </div>
         </div>
       </Card>
+      {isQrOpen && (
+        <div className="qr_window">
+          <div className="qr__code__container">
+            <QRCode
+              value={`https://trh-seven.vercel.app/plantProfile/${params.plantId}`}
+              renderAs="svg"
+              level="H"
+              size={175}
+              // bgColor="#1A6426"
+              fgColor="#1A6426"
+              imageSettings={{
+                src: "https://res.cloudinary.com/drfaya2tc/image/upload/v1623075135/trh_o8mzvf.png",
+                height: 50,
+                width: 50,
+              }}
+            />
+          </div>
+          <div className="close__btn" onClick={props.onClose}>
+            <AiFillCloseCircle
+              onClick={() => setIsQrOpen(false)}
+              className="close__btn"
+            />
+          </div>
+        </div>
+      )}
       <PlantCareCard
         careTitle="Lighting"
         show={showLighting}
