@@ -96,7 +96,7 @@ const PlantGeneralInformation = (props) => {
           <div className="qr__code__container">
             <QRCode
               value={`https://trh-seven.vercel.app/plantProfile/${params.plantId}`}
-              renderAs="svg"
+              renderAs="canvas"
               level="H"
               size={175}
               // bgColor="#1A6426"
